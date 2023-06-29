@@ -6,13 +6,7 @@ def factorize(*number):
 
     result = []
     for el in number:
-        lst = []
-        counter = 0
-        while counter <= el:
-            counter += 1
-            if el % counter == 0:
-                lst.append(counter)
-        result.append(lst)
+        result.append([i for i in range(el+1) if el>=i>0 and el%i == 0])
     return result
 
 if __name__ == '__main__':
